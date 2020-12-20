@@ -23,7 +23,7 @@ defmodule Hitos.MixProject do
     [
        {:cowboy, "~> 1.0.0"},
        {:plug, "~> 1.0"},
-       {:json, "~> 1.2"},
+       {:poison, "~> 3.1"},
     ]
   end
 end

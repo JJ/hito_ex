@@ -3,6 +3,7 @@ defmodule HitosTest do
   doctest Hitos
 
   test "greets the world" do
-    assert Hitos.carga()
+    hitos = Hitos.carga()
+    assert hitos.baseURL == "https://ivgrx.tech/hitos"
   end
 end
