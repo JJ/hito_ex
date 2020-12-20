@@ -3,6 +3,6 @@ defmodule HitosTest do
   doctest Hitos
 
   test "greets the world" do
-    assert Hitos.hello() == :world
+    assert Hitos.carga()
   end
 end
