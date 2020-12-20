@@ -22,7 +22,7 @@ defmodule Hitos.MixProject do
   defp deps do
     [
        {:poison, "~> 3.1"},
-       {:trot, github: "hexedpackets/trot"}
+       {:plug, "~> 1.11"}
     ]
   end
 end
