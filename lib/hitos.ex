@@ -1,5 +1,4 @@
 defmodule Hitos do
-  use json
   @moduledoc """
   Organización en hitos de una asignatura de informática.
   """
@@ -10,8 +9,9 @@ defmodule Hitos do
 
   """
   def carga( hitos_file \\ "hitos.json" ) do
-    {:ok, hitos_json} = File.open(hitos_file, [:read])
-    {status, hitos } = JSON.decode( hitos_json)
-    hitos
+    with {:ok, hitos_json} <- File.read(hitos_file),
+	 {:ok, hitos } = Poison.decode( hitos_json), do: {:ok, %Hitos{ name: Map.get(hitos,"comment"),
+								       baseURL: Map.get(hitos, "baseURL"),
+								       hitos: Map.get(hitos, "hitos") } }
   end
 end
