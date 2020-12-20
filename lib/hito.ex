@@ -2,5 +2,5 @@ defmodule Hito do
   @moduledoc """
   Un solo hito
   """
-  defstruct [ :URL, :descripcion, :fecha]
+  defstruct [ :file, :title, :fecha]
 end
