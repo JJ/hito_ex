@@ -21,9 +21,8 @@ defmodule Hitos.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-       {:cowboy, "~> 1.0.0"},
-       {:plug, "~> 1.0"},
        {:poison, "~> 3.1"},
+       {:trot, github: "hexedpackets/trot"}
     ]
   end
 end
