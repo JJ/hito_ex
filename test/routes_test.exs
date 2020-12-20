@@ -11,5 +11,6 @@ defmodule Hitos.RoutesTest do
 
     assert conn.state == :sent
     assert conn.status == 200
+    assert conn.resp_body == "þor"
   end
 end
